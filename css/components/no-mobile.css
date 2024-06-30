@@ -1,0 +1,36 @@
+#no-mobile {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 645px) {
+  #no-mobile {
+    display: none;
+  }
+}
+
+@keyframes swingFace {
+  0% {
+    transform: rotateZ(30deg);
+  }
+  50% {
+    transform: rotateZ(135deg);
+  }
+  100% {
+    transform: rotateZ(30deg);
+  }
+}
+
+#no-mobile span:last-child {
+  display: block;
+  animation: swingFace 2s cubic-bezier(0.61, 0.24, 0.4, 0.88) infinite;
+}
